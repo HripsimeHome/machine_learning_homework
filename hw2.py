@@ -36,7 +36,7 @@ salary(employee1)
 salary(employee2)
 
 
-#Clusterization example
+# Clusterization example
 
 dress1 = {"style": "Classic", "Color": "Black"}
 dress2 = {"style": "Casual", "Color": "Blue"}
@@ -62,3 +62,17 @@ def divide_groups(dresses):
             print("There is no such group.")
 
 divide_groups(dress_list)
+
+
+# Web Scraping example
+
+from googlesearch import search
+import requests
+URL = "https://www.ameriabank.am"
+page_source = requests.get(URL)
+
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(page_source.text, 'html.parser')
+
+# Exchange Rates table from Ameria Bank
+print(soup.find('table',  id="exchange").text)
