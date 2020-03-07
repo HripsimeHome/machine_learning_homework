@@ -76,3 +76,4 @@ soup = BeautifulSoup(page_source.text, 'html.parser')
 
 # Exchange Rates table from Ameria Bank
 print(soup.find('table',  id="exchange").text)
+
