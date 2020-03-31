@@ -4,7 +4,7 @@ import pandas as pd
 
 print("Math operations:")
 df = pd.DataFrame({'Col1': [10, 20, 30, 40], 'Col2': [2, 3, 4, 5], 'Col3': [5, 10, 3, 4]})
-df['Multiplication'] = 4 * df['Col1'] # bazmapatkel 4 -ov miayn col1 kolonkan
+df['Multiplication'] = 4 * df['Col1'] # bazmapatkel 4-ov miayn col1 kolonkan
 df['Total 1'] = df['Col1'] / df['Col2']
 df['Total 2'] = df['Col1'] // df['Col3']
 df['Pow'] = 2 ** df['Col2']
@@ -29,10 +29,5 @@ df2 = pd.DataFrame({"A": [5, 10, 7, 8, 5],
                     "D": [1, 5, 3, 8, 6]})
 sub = df1.subtract(df2)
 print(sub)
-
-
-# Logistic regression
-
-
 
 
