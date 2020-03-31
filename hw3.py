@@ -134,3 +134,27 @@ print(np.corrcoef(x, y))
 print("Median") # медиана — это такое число выборки, что ровно половина из элементов выборки больше него, а другая половина меньше него
 a = np.array([[10, 20, 30], [40, 50, 60]])
 print(np.median(a))
+
+
+
+#Linear Regression
+
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+
+# Apranqi vacharq
+x = np.array([100, 120, 110, 130, 135]).reshape(-1, 1)
+y = np.array([105, 125, 95, 110, 120])
+
+model = LinearRegression().fit(x, y)
+print("R squared", model.score(x, y))
+print("Intercept: ", model.intercept_)
+print("Slope: ", model.coef_)
+y_pred = model.intercept_ + model.coef_ * x
+print('Predicted response:', y_pred) # Vax@ klini
+
+plt.scatter(x, y, color="r")
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.plot(x, model.predict(x))
+plt.show()
