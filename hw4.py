@@ -31,3 +31,33 @@ sub = df1.subtract(df2)
 print(sub)
 
 
+
+# Logistic Regression
+
+# Kupit li klient produkt?
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+
+sale_data = {'PrevSale': [150, 230, 100, 130, 110, 120, 130, 90], 'Week': [1, 2, 3, 4, 5, 2, 3, 5], 'isPaying': [0, 0, 1, 1, 0, 1, 1, 0]}
+sale = pd.DataFrame(sale_data)
+print(sale)
+
+X = sale[['PrevSale', 'Week']]
+y = sale['isPaying']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=101)
+
+logmodel = LogisticRegression()
+logmodel.fit(X_train, y_train)
+
+prediction = logmodel.predict(X_test)
+print(prediction)
+
+from sklearn.metrics import classification_report
+print('Classification report: ', classification_report(y_test, prediction)) # Inchqanova chisht
+
+from sklearn.metrics import confusion_matrix
+print(confusion_matrix(y_test, prediction))
+
+
+
