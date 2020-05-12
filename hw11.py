@@ -1,9 +1,9 @@
 import numpy as np
 
-# Vor sezonin e patkanum xndzor@ (летние, осенние и зимние)
-# Y - season -> summer, autumnt, winter;
+# Vor sezonin e patkanum xndzor@ (summer, autumn, winter)
+# Y - season: summer, autumn, winter;
 # X color: green - summer(0), yellow - autumn(1), red - winter(2);
-# X sort: yubilyar - summer(0), golden - autumn(1), kixura - winter(2);
+# X sort: yubilyar - summer(0), golden - autumn(1), kexura - winter(2);
 # X size: small - summer(0), medium - autumn (1), big - winter(2);
 
 class Apples:
